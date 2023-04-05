@@ -1,0 +1,463 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+
+html{
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* ***************************************
+*********HEADER STYLE START************
+*************************************** */
+
+.header{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #12128d;
+    padding: 1rem 2rem;
+    z-index: 999;
+    position: fixed;
+}
+
+.header h1{
+    color: #fff;
+    font-style: italic;
+    font-size: 2rem;
+    text-transform: uppercase;
+    cursor: default;
+    -webkit-text-stroke: 0.1rem black;
+}
+
+.header .menu{
+    display: none;
+}
+
+.header h1 span{
+    color: #9a9aff;
+}
+
+.navbar{
+    margin-right: 4rem;
+}
+
+.navbar a{
+    display: inline-block;
+    color: #fff;
+    font-weight: bold;
+    margin: 0 1rem;
+}
+
+.navbar a::after{
+    content: '';
+    display: block;
+    width: 0;
+    height: 0.2rem;
+    background-color: whitesmoke;
+    transition: 0.3s;
+}
+
+.navbar a:hover::after{
+    width: 100%;
+}
+
+/* ***************************************
+*********HEADER STYLE END************
+*************************************** */
+
+/* ***************************************
+*********HEADER STYLE END************
+*************************************** */
+
+.home{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    background-color: #333;
+}
+
+.home figure{
+    position: relative;
+}
+
+.home figure:hover img{
+    filter: brightness(20%);
+}
+
+.home figure:hover figcaption{
+    opacity: 1;
+    visibility: visible;
+}
+
+.home figure img{
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.home figure figcaption{
+    position: absolute;
+    color: white;
+    top: 50%;
+    left: 30%;
+    text-transform: uppercase;
+    font-weight: 900;
+    opacity: 0;
+    visibility: hidden;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.home h1{
+    color: #fff;
+    margin-top: 1rem;
+    font-style: italic;
+}
+
+/* ***************************************
+*********HEADER STYLE END************
+*************************************** */
+
+/* ***************************************
+*********MAIN STYLE END************
+*************************************** */
+.main{
+    width: 100%;
+    height: 100vh;
+    padding: 8rem 0 0;
+    background-color: #111;
+    text-align: center;
+}
+
+.main h1{
+    color: white;
+}
+
+/* CONTENT STYLE START */
+
+.content-container{
+    width: 70%;
+    height: 60%;
+    margin: 1rem auto;
+    background-color: #f1f1f1;
+    border: 0.3rem solid yellow;
+    border-radius: 1rem;
+    overflow-y: scroll;
+    position: relative;
+}
+
+.content-container::-webkit-scrollbar{
+    display: none;
+}
+
+.content-code{
+    display: flex;
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 0.8rem;
+    background-color: rgb(175, 175, 175);
+    text-align: left !important;
+}
+
+.arrow-left, .arrow-right{
+    position: absolute;
+    top: 50%;
+    cursor: pointer;
+    padding: 1rem 2rem;
+    background-color: #12128d;
+    color: white;
+    transition: 0.3s;
+}
+
+.arrow-left{
+    left: -7%;
+}
+
+.arrow-left:hover{
+    left: 0;
+}
+
+.arrow-right{
+    right: -7%;
+}
+
+.arrow-right:hover{
+    right: 0;
+}
+
+.art-menu-list{ 
+    display: inline-block;
+    width: 60%;
+    height: 15%;
+    margin: 0 auto;
+    padding: 1rem;
+    text-align: center;
+    background-color: yellowgreen;
+    transition: 0.3s;
+    border: 0.3rem solid white;
+    border-radius: 1rem;
+    color: white;
+    font-weight: 900;
+    overflow: hidden;
+    position: relative;
+}
+
+.menu-list {
+    display: inline-block;
+    overflow: hidden;
+    margin: 1rem 1rem;
+    width: 1rem;
+    height: 1rem;
+    border: 0.3rem solid white;
+    text-align: left;
+    border-radius: 50%;
+    padding: 0.5rem;
+    transition: 0.3s;
+    cursor: pointer;
+    visibility: visible;
+    opacity: 1;
+}
+
+.menu-list:hover{
+    width: 10rem;
+    border-radius: 1rem;
+    color: black;
+    background-color: #fff;
+    text-align: center;
+}
+
+.menu-list p{
+    margin: -0.3rem;
+    text-align: center
+}
+
+.right-menu, .left-menu{
+    position: absolute;
+    background-color: white;
+    top: 50%;
+    color: black;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.right-menu:hover, .left-menu:hover{
+    transform: scale(1.5);
+}
+
+.right-menu{
+    right: 0;
+}
+
+.left-menu{
+    left: 0;
+}
+
+article{
+    margin: 1rem 2rem;
+    position: absolute;
+    transition: 0.3s;
+    opacity: 1;
+    visibility: visible;
+}
+
+.disactive-article{
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+}
+
+article h2{
+    margin: 1rem 0;
+}
+
+article p{
+    text-align: justify;
+}
+
+.p-blue{
+    color: blue;
+    font-style: italic;
+}
+
+.p-green{
+    color: green;
+    font-style: italic;
+}
+
+.p-red{
+    color: red;
+    font-style: italic;
+}
+
+.p-aqua{
+    color: aqua;
+    font-style: italic;
+}
+
+.p-brown{
+    color: brown;
+    font-style: italic;
+}
+
+.p-green{
+    color: green;
+    font-style: italic;
+}
+
+.p-yellow{
+    color: yellow;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.p-purple{
+    color: rgb(85, 2, 85);
+    font-style: italic;
+}
+
+table, table tr, table th, table td{
+    border: 0.1rem solid black;
+}
+
+td{
+    padding: 0 1rem;
+}
+
+table{
+    margin: 0 auto;
+}
+
+article ol{
+    margin-left: 3rem;
+}
+
+article ol li{
+    text-align: left;
+}
+
+/* CONTENT STYLE END */
+
+/* ***************************************
+*********MAIN STYLE END************
+*************************************** */
+
+/* ***************************************
+*********CONTACT STYLE START************
+*************************************** */
+.contact{
+    width: 100%;
+    height: 100vh;
+    background-color: #888;
+    padding-top: 2rem;
+   }
+
+   .contact h1{
+    text-align: center;
+    color: white;
+    margin: 3rem;
+    cursor: default;
+   }
+
+   .contact-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 70%;
+    margin: 10rem auto;
+   }
+
+   .contact button{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 12rem;
+    height: 4rem;
+    background-color: transparent;
+    border-radius: 10px;
+    border: 0.3rem solid #530404;
+    cursor: pointer;
+    color: white;
+    font-size: 1.3rem;
+    transition: 0.3s;
+   }
+
+   .contact button:hover{
+    background-color: #333;
+    transform: scale(1.3);
+    border: none;
+   }
+/* ***************************************
+*********CONTACT STYLE END************
+*************************************** */
+@media(max-width: 768px){
+    html{
+        font-size: 75%;
+    }
+
+    .contact-container{
+        flex-direction: column;
+      }
+    
+      .contact-container a button{
+        margin: 1rem 0;
+      }
+}
+
+@media(max-width: 576px){
+    html{
+        font-size: 50%;
+    }
+
+    .menu{
+        display: block !important;
+        margin: 0 5rem;
+        color: #fff;
+        padding: 1rem;
+        border-radius: 1rem;
+        transition: 0.3s;
+    }
+
+    .menu-active{
+        background-color: blue;
+    }
+
+    .navbar{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        text-align: center;
+        height: 15vh;
+        background-color: #12128d;
+        right: -1000%;
+        top: 100%;
+        opacity: 0;
+        z-index: 0;
+        padding: 2rem 2rem;
+        transition: 0.5s;
+    }
+
+    .navbar-active{
+        right: 0;
+        opacity: 1; 
+    }
+
+    .navbar a{
+        margin: 1rem 0;
+    }
+}
+
+/* ***************************************
+*********MAIN STYLE END************
+*************************************** */

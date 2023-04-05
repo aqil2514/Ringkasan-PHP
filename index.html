@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ringkasan PHP</title>
+
+    <!-- My Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fasthand&family=Poppins:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- MY FAVICON -->
+    <link rel="shortcut icon" href="img/icon.png" type="image/x-icon" />
+
+    <!-- MY ICONS -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <!-- MY STYLES -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- NAVBAR START -->
+    <nav class="header">
+      <h1>Ringkasan <span>PHP</span></h1>
+      <i data-feather="menu" class="menu"></i>
+      <div class="navbar">
+        <a href="#home">Home</a>
+        <a href="#main">Ringkasan</a>
+        <a href="#contact">Kontak</a>
+      </div>
+    </nav>
+    <!-- NAVBAR END -->
+
+    <!-- HOME PAGE START -->
+    <section class="home" id="home">
+      <figure>
+        <a href="#main">
+          <img src="img/icon.png" alt="PHP Logo" />
+          <figcaption>Mulai!</figcaption>
+        </a>
+      </figure>
+      <h1>Ringkasan PHP</h1>
+    </section>
+    <!-- HOME PAGE END -->
+
+    <!-- MAIN PAGE START -->
+    <section class="main" id="main">
+      <header>
+        <h1>Ringkasan PHP</h1>
+      </header>
+      <div class="content-container">
+        <!-- ALL ARTICLE START -->
+        <article>
+          <h2>1.1 Dasar-dasar PHP (Sintaks)</h2>
+          <p>
+            Sama dengan HTML, PHP memilikis sintaks dasar untuk membuka dan
+            menutup kode, yaitu dengan "&lt?php" untuk membuka dan "?>" untuk
+            menutup, contoh:
+          </p>
+          <br />
+          <div class="content-code">
+          <p>
+              <span class="p-blue">&lt?php</span>
+              <span class="p-green">echo</span>
+              <span class="p-red">"ini adalah kode di dalam PHP"</span>
+              <span class="p-blue"> ?></span>
+            </p> <br>
+        </div><br>
+            <p>Code tersebut masih bisa disederhanakan menjadi berikut</p><br>
+            <div class="content-code">
+            <p>
+              <span class="p-blue">&lt?=</span>
+              <span class="p-green">echo</span>
+              <span class="p-red">"ini adalah kode di dalam PHP"</span>
+              <span class="p-blue"> ?></span>
+            </p> <br>
+        </div>
+        </article>
+        <article class="disactive-article">
+          <h2>1.2 Dasar-dasar PHP (Variabel)</h2>
+          <p>
+            Untuk menambahkan suatu data dalam variabel, dapat dibuat dengan tanda dolar, contoh. <br>
+            <div class="content-code">
+              <span class="p-aqua">$nama</span> = <span class="p-brown">"Muhamad Aqil Maulana"</span>;
+            </div> <br>
+          </p>
+          <p>
+            Variabel tidak boleh diawali dengan angka. Namun, boleh mengandung unsur angka.
+          </p>
+          <p>Cara memanggilnya, cukup buka tag PHP dan langsung tulis nama variabelnya sesuai dengan yang ditentukan.</p>
+          <div class="content-code">
+            <p><span class="p-blue">&lt?php</span> echo  <span class="p-aqua">$nama</span><span class="p-blue">?></span></p>
+          </div>
+        </article>
+        <article class="disactive-article">
+          <h2>1.3 Dasar-dasar PHP (Penggabungan dua string)</h2>
+          <p>
+            Penggabungan dua string dalam PHP menggunakan tanda titik. Contoh, saya memliki tiga variabel.
+          </p>
+          <div class="content-code" style="display: block;">
+            <p><span class="p-aqua">$nama_depan</span>= <span class="p-brown">"Muhamad"</span>;</p>
+            <p><span class="p-aqua">$nama_tengah</span>= <span class="p-brown">"Aqil"</span>;</p>
+            <p><span class="p-aqua">$nama_belakang</span>= <span class="p-brown">"Maulana"</span>;</p>
+          </div>
+          <br>
+          <p>Di bawah ini adalah contoh pemanggilannya.</p>
+          <div class="content-code">
+            <p><span class="p-aqua">$nama_depan</span>= <span class="p-brown">"Muhamad"</span> . " " <span class="p-aqua">$nama_tengah</span>= <span class="p-brown">"Aqil"</span> . " ". <span class="p-aqua">$nama_belakang</span>= <span class="p-brown">"Maulana"</span></p>
+          </div>
+        </article>
+        <article class="disactive-article">
+          <h2>1.4 Dasar-dasar PHP (Operator-operator)</h2>
+          <p>Dalam PHP, ada juga beberapa operator penting yang akan digunakan dalam pengkodean. Perhatikan tabel di bawah ini:</p>
+          <table width="100%">
+          <tr>
+            <th>Assignment</th>
+            <th>Perbandingan</th>
+            <th>Identitas</th>
+            <th>Logika</th>
+          </tr>
+          <tr>
+            <td>=</td>
+            <td>&lt</td>
+            <td>===</td>
+            <td>&&</td>
+          </tr>
+          <tr>
+            <td>+=</td>
+            <td>></td>
+            <td>!==</td>
+            <td>||</td>
+          </tr>
+          <tr>
+            <td>-=</td>
+            <td>&lt=</td>
+            <td></td>
+            <td>!</td>
+          </tr>
+          <tr>
+            <td>/=</td>
+            <td>>=</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>*=</td>
+            <td>==</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>&=</td>
+            <td>!=</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>.=</td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          </table>
+        </article>
+        <article class="disactive-article">
+          <h2>1.5 Dasar-dasar PHP (Komentar)</h2>
+          <p>Ada dua cara memberika komentar dalam PHP, yaitu dengan tanda kurung dua kali "//" dan tanda bintang ditambah tanda kurung "/*...*/", contoh:</p>
+          <div class="content-code">
+            <p><span class="p-green">// Ini adalah komentar dalam PHP dengan menggunakan dua kali tanda kurung.</span></p></div> <br>
+            <div class="content-code"> <p><span class="p-green">/* Ini adalah komentar dalam PHP dengan menggunakan tanda bintang + tanda kurung.
+              Mudah kan?*/
+            </span></p>
+          </div>
+        </article>
+        <article class="disactive-article">
+          <h2>1.6 Dasar-dasar PHP (echo, print, print_r, var_dump)</h2>
+          <p>Ada 4 cara untuk menampilkan suatu tulisan ke dalam web, yaitu dengan menggunakan echo, print, print_r, dan var_dump</p>
+          <div class="content-code">
+            <p><span class="p-green ">echo</span> <span class="p-brown"> "Muhamad Aqil Maulana"</span> </p>
+          </div> <br>
+          <table >
+            <tr>
+              <th>Nama</th>
+              <th>Fungsi</th>
+              <th>Contoh</th>
+            </tr>
+            <tr>
+              <td>echo</td>
+              <td rowspan="2">Menampilkan tulisan</td>
+              <td><span class="p-green">echo</span> <span class="p-brown">"Muhamad Aqil Maulana"</span></td>
+            </tr>
+            <tr>
+              <td>print</td>
+              <td><span class="p-green">print</span> <span class="p-brown">"Muhamad Aqil Maulana"</span></td>
+            </tr>
+            <tr>
+              <td>print_r</td>
+              <td>Menampilkan isi Array</td>
+              <td><span class="p-green">print_r</span> <span class="p-brown">("Muhamad Aqil Maulana")</span></td>
+            </tr>
+            <tr>
+              <td>var_dump</td>
+              <td>Melihat informasi lebih dari suatu tipe data.</td>
+              <td><span class="p-green">var_dump</span> <span class="p-brown">("Muhamad Aqil Maulana")</span></td>
+            </tr>
+          </table>
+        </article>
+        <article class="disactive-article">
+          <h2>2.1. Control Flow</h2> <br>
+          <p>Dalam konteks ini, tidak beda jauh antara Javascript dengan PHP. PHP memiliki 2 jenis Control Flow, yaitu pengulangan dan pengkondisian. Berikut adalah Keywordnya: </p>
+          <ol>
+            <li>for</li>
+            <li>while</li>
+            <li>do...while</li>
+            <li>if...else</li>
+          </ol>
+        </article>
+        <article class="disactive-article">
+          <h2>2.2. Control Flow (for)</h2> <br>
+          <p>For digunakan untuk menentukan berapa kali suatu kode itu dijalankan. Keyword ini seringkali digunakan untuk membuat kode yang berulang-ulang. format:</p>
+          <div class="content-code" style="margin: 0 auto">
+            <p><span class="p-purple">for</span> <span class="p-yellow">(</span><span class="p-blue">$nilai_awal; $nilai_awal &lt/> nilai akhir; increment / decrement </span><span class="p-yellow">)</span></p>
+          </div><br>
+
+          <p>Contoh:</p>
+          <div class="content-code" style="display: block;">
+            <p><span class="p-red">&lt?php </span></p>
+            <p><span class="p-purple">for</span> <span class="p-yellow">(</span><span class="p-blue">$x = 0; $x &lt 10; $x++ </span><span class="p-yellow">)</span>{</p>
+            <p><span class="p-blue">echo</span> <span class="p-brown">"The number is: $x &ltbr>";</span></p><p>}</p>
+            <p><span class="p-red">?></span></p></div><br>
+            <p><b>Penjelasan: <br></b></p>
+            <p>$x = 0; // Variabel awal adalah 0</p>
+            <p>$x &lt 10; // Variabel akhir adalah 10</p>
+            <p>$x++ // Increment</p>
+        </article>
+        <article class="disactive-article">
+          <h2>2.3. Control Flow (While)</h2> <br>
+          <p>While adalah sebuah jenis control flow yang akan menjalankan serangkaian kode apabila kondisi di dalam tanda kurung itu bernilai true. Format</p>
+          <div class="content-code">
+            <p><span class="p-purple">while</span> (kondisi)</p>
+          </div> <br>
+          <p>Contoh :</p>
+          <div class="content-code" style="display:block;">
+            <p><span class="p-purple">while</span> <span class="p-aqua">($i &lt 5)</span>{</p>
+            <p><span class="p-yellow">echo</span> <span class="p-brown">"Hello World &ltbr>"</span>;</p>
+            <p><span class="p-aqua">$i</span>++ <span class="p-green">// Increment</span></p>
+            <p>}</p>
+          </div>
+        </article>
+        <!-- ALL ARTICLE END -->
+        <i class="arrow-left" data-feather="arrow-left" onclick="prevPage()"></i>
+        <i class="arrow-right" data-feather="arrow-right" onclick="nextPage()"></i>
+      </div>
+      <div class="art-menu-list">
+        <h1 style="text-align: center;">Menu List</h1>
+        <div class="menu-section">
+        <div class="menu-list" onclick="goToSide(0)"><p>1<span> Dasar-dasar</span></p></div>
+        <div class="menu-list" onclick="goToSide(6)"><p>2<span> Control Flow</span></p></div>
+        </div>
+        <i data-feather="arrow-right" class="right-menu" onclick="nanti()"></i>
+        <i data-feather="arrow-left" class="left-menu"onclick="nanti()"></i>
+      </div>
+    </section>
+    <!-- MAIN PAGE END -->
+
+            <!-- CONTACT PAGE START -->
+            <section class="contact" id="contact">
+              <h1>Hubungi saya Melalui</h1>
+              <div class="contact-container">
+                  <a href="https://mail.google.com/mail/u/0/?view=cm&tf=1&fs=1&to=muhamadaqil383@gmail.com" target="_blank"><button type="button"><span><i data-feather="mail"></i></span>Email</button></a>
+                  <a href="https://instagram.com/aqil.co.id/" target="_blank"><button type="button"><span><i data-feather="instagram"></i></span>Instagram</button></a>
+                  <a href="https://github.com/aqil2514" target="_blank"><button type="button"><span><i data-feather="github"></i></span>Github</button></a>
+                  <a href="https://wa.me/6281779174118" target="_blank"><button type="button"><span><i data-feather="message-circle"></i></span>WhatsApp</button></a>
+              </div>
+          </section>
+          <!-- CONTACT PAGE END -->
+
+    <!-- FEATHER ICONS  -->
+    <script>feather.replace()</script>
+
+    <!-- MY SCRIPT -->
+    <script src="js/script.js"></script>
+  </body>
+</html>

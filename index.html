@@ -257,6 +257,91 @@
             <p>}</p>
           </div>
         </article>
+        <article class="disactive-article">
+          <h2>2.4. Control Flow (Do...While)</h2>
+          <p>Do...While adalah salah satu control flow PHP yang berfungsi untuk melakukan looping juga. Bedanya dengan While, Do While akan melakukan minimal satu kali pengerjaan sedangkan while tidak.</p>
+          <p>Sintaks:</p>
+          <div class="content-code" style="display: block;">
+            <p><span class="p-purple">Do</span>{</p>
+              <p>Aksi</p>
+            <p>} <span class="p-purple">while</span>(kondisi)</p>
+          </div> <br>
+          <p>Contoh:</p>
+          <div class="content-code" style="display: block;">
+            <p><span class="p-aqua">$i = 0;</span></p>
+            <p><span class="p-purple">do</span>{</p>
+              <p><span class="p-yellow">echo</span> <span class="p-brown">"Hello World &ltbr>"</span>;</p>
+              <p><span class="p-aqua">$i</span>++</p>
+            <p>} <span class="p-purple">while</span>(<span class="p-aqua">$i</span> &lt 5 )</p>
+          </div>
+        </article>
+        <article class="disactive-article">
+          <h2>2.5. Control Flow (If...Else)</h2>
+          <p>Sama seperti yang lainnya, If...Else adalah looping yang ada pada PHP. Tidak hanya If...Else, PHP juga mengenal istilah elseif. Penulisannya bisa disambung (elseif) dan bisa dipisah (else if).</p>
+          <p>Sintaks:</p>
+          <div class="content-code" style="display: block;">
+            <p><span class="p-purple">if</span>(Kondisi) {</p>
+              <p>Aksi</p>
+            <p>} <span class="p-purple">elseif</span>(Kondisi) { <span class="p-green">// Juga bisa ditulis else if</span></p>
+              <p>Aksi</p>
+            <p>} <span class="p-purple">else</span>{Aksi}</p>
+
+          </div>
+        </article>
+        <article class="disactive-article">
+          <h2>3.1. Function</h2>
+          <p>Sama seperti Javascript, PHP juga mengenal function. Dalam PHP, ada dua jenis Function, yaitu:</p>
+          <ol>
+            <li>Built In Function : Function yang telah tersedia oleh PHP secara default dapat digunakan secara bebas.</li>
+            <li>User Defined Function : Function yang dibuat sendiri.</li>
+          </ol> <br>
+          <p>Di bawah ini adalah beberapa Built In Function:</p>
+          <ul>
+            <li><h3>String</h3></li>
+            <ol>
+              <li>.strlen() = Menghitung panjang string</li>
+              <li>.strcmp() = Menggabungkan dua buah string</li>
+              <li>.explode() = Menggabungkan kedua string menjadi array</li>
+              <li>.htmlspecialchars() = Memberikan keamanan pada website</li>
+            </ol>
+          </ul>
+          <ul><h3>Utility</h3>
+          <ol>
+            <li> .isset() = Apakah variabel telah dibuat? (Hasil boolean)</li>
+            <li> .empty() = Variabel apa yang kosong?</li>
+            <li> .die() = Memberhentikan program</li>
+            <li> .sleep() = Memberhentikan sementara program</li>
+          </ol>
+          </ul>
+          <ul><h3>Date / Tiime</h3>
+          <ol>
+            <li> .time()</li>
+            <li> .date()</li>
+            <li> .mktime()</li>
+            <li> .strtotime()</li>
+            <li><a href="https://www.php.net/manual/en/function.date.php" target="_blank">Lain-lain</a></li>
+          </ol>
+          </ul>
+        </article>
+        <article class="disactive-article">
+          <h2>3.2. User Defined Function</h2>
+          <p>User Defined Function adalah function yang dibuat sendiri oleh para programmer PHP. Function dalam PHP tidak berbeda jauh dengan function dalam Javascript, berikut adalah contohnya:</p>
+          <div class="content-code">
+            <p>function salam($nama = "Admin", $waktu = "Datang") {
+    return "Selamat $waktu, $nama!";
+}</p>
+          </div>
+          <p>Contoh pemanggilannya</p>
+          <div class="content-code">
+            &lt?= salam();?>
+          </div>
+          <h3>Penjelasan</h3>
+          <p>function : Deklarasi Function</p>
+          <p>salam : Nama Function</p>
+          <p>$nama = "Admin" : Parameter 1 dengan nilai default "Admin"</p>
+          <p>$waktu = "Datang" : Parameter 2 dengan nilai default "Datang"</p>
+          <p>return : Nilai yang dikembalikan;</p>
+        </article>
         <!-- ALL ARTICLE END -->
         <i class="arrow-left" data-feather="arrow-left" onclick="prevPage()"></i>
         <i class="arrow-right" data-feather="arrow-right" onclick="nextPage()"></i>
@@ -266,6 +351,8 @@
         <div class="menu-section">
         <div class="menu-list" onclick="goToSide(0)"><p>1<span> Dasar-dasar</span></p></div>
         <div class="menu-list" onclick="goToSide(6)"><p>2<span> Control Flow</span></p></div>
+        <div class="menu-list" onclick="goToSide(11)"><p>3<span> Function</span></p></div>
+        </div>
         </div>
         <i data-feather="arrow-right" class="right-menu" onclick="nanti()"></i>
         <i data-feather="arrow-left" class="left-menu"onclick="nanti()"></i>

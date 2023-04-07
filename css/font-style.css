@@ -1,0 +1,57 @@
+/* ************************** */
+/* SHORTCUT CEPAT UNTUK DI HTML */
+/* ************************** */
+
+/* LIST START
+1. pblue = Warna Biru
+2. pgreen = Warna Hijau
+3. pred = Warna Merah
+4. paqua = Warna biru muda
+5. pbrown = Warna cokelat
+6. pyellow = Warna kuning
+7. pwhite = Warna Putih Kode
+LIST END */
+
+.p-white{
+    color: #c8f028;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.p-blue{
+    color: blue;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.p-green{
+    color: green;
+    font-style: italic;
+}
+
+.p-red{
+    color: red;
+    font-style: italic;
+}
+
+.p-aqua{
+    color: rgb(70, 255, 255);
+    font-style: italic;
+}
+
+.p-brown{
+    color: brown;
+    font-style: italic;
+}
+
+.p-yellow{
+    color: yellow;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.p-purple{
+    color: rgb(85, 2, 85);
+    font-style: italic;
+    font-weight: bold;
+}

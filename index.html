@@ -27,6 +27,7 @@
 
     <!-- MY STYLES -->
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/font-style.css">
   </head>
   <body>
     <!-- NAVBAR START -->
@@ -59,6 +60,7 @@
         <h1>Ringkasan PHP</h1>
       </header>
       <div class="content-container">
+        <div class="article-container">
         <!-- ALL ARTICLE START -->
         <article>
           <h2>1.1 Dasar-dasar PHP (Sintaks)</h2>
@@ -325,26 +327,29 @@
         </article>
         <article class="disactive-article">
           <h2>3.2. User Defined Function</h2>
-          <p>User Defined Function adalah function yang dibuat sendiri oleh para programmer PHP. Function dalam PHP tidak berbeda jauh dengan function dalam Javascript, berikut adalah contohnya:</p>
-          <div class="content-code">
-            <p>function salam($nama = "Admin", $waktu = "Datang") {
-    return "Selamat $waktu, $nama!";
-}</p>
-          </div>
-          <p>Contoh pemanggilannya</p>
-          <div class="content-code">
-            &lt?= salam();?>
-          </div>
+          <p>Dalam PHP, programmer bisa membuat functionnya tersendiri. Programmer bisa menggunakan format seperti di bawah ini.</p>
+          <div class="content-code" style="display: block;">
+            <p><span class='p-blue'>function</span> <span class='p-white'>salam</span>(<span class='p-aqua'>$nama</span> = <span class='p-brown'>"Admin"</span>,<span class='p-aqua'> $waktu</span> = <span class='p-brown'>"Datang"</span>) {</p>
+              <p><span class='p-purple'>return</span> <span class='p-brown'>"Selamat</span><span class='p-aqua'> $waktu</span><span class='p-brown'>,</span> <span class='p-aqua'> $nama</span><span class='p-brown'>!"</span>;</p>
+              <p>}</p>
+            </div>
           <h3>Penjelasan</h3>
           <p>function : Deklarasi Function</p>
           <p>salam : Nama Function</p>
           <p>$nama = "Admin" : Parameter 1 dengan nilai default "Admin"</p>
           <p>$waktu = "Datang" : Parameter 2 dengan nilai default "Datang"</p>
-          <p>return : Nilai yang dikembalikan;</p>
+          <p>return : Nilai yang dikembalikan;</p> <br>
+          Cara pemanggilannya: 
+          <div class="content-code" style="display: block;">
+            <p><span class='p-white'>salam</span><span class='p-yellow'>()</span></p>
+          </div>
         </article>
+      </div>
         <!-- ALL ARTICLE END -->
-        <i class="arrow-left" data-feather="arrow-left" onclick="prevPage()"></i>
-        <i class="arrow-right" data-feather="arrow-right" onclick="nextPage()"></i>
+        <div class="arrow-art">
+          <i class="arrow-left" data-feather="arrow-left" onclick="prevPage()"></i>
+          <i class="arrow-right" data-feather="arrow-right" onclick="nextPage()"></i>
+        </div>
       </div>
       <div class="art-menu-list">
         <h1 style="text-align: center;">Menu List</h1>
@@ -352,10 +357,10 @@
         <div class="menu-list" onclick="goToSide(0)"><p>1<span> Dasar-dasar</span></p></div>
         <div class="menu-list" onclick="goToSide(6)"><p>2<span> Control Flow</span></p></div>
         <div class="menu-list" onclick="goToSide(11)"><p>3<span> Function</span></p></div>
-        </div>
-        </div>
         <i data-feather="arrow-right" class="right-menu" onclick="nanti()"></i>
         <i data-feather="arrow-left" class="left-menu"onclick="nanti()"></i>
+        </div>
+        </div>
       </div>
     </section>
     <!-- MAIN PAGE END -->

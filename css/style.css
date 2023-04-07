@@ -146,8 +146,15 @@ html{
 /* CONTENT STYLE START */
 
 .content-container{
-    width: 70%;
+    width: 80%;
     height: 60%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.article-container{
+    width: 90%;
+    height: 90%;
     margin: 1rem auto;
     background-color: #f1f1f1;
     border: 0.3rem solid yellow;
@@ -156,9 +163,10 @@ html{
     position: relative;
 }
 
-.content-container::-webkit-scrollbar{
+.article-container::-webkit-scrollbar{
     display: none;
 }
+
 
 .content-code{
     display: flex;
@@ -171,28 +179,31 @@ html{
 
 .arrow-left, .arrow-right{
     position: absolute;
-    top: 50%;
+    top: 45%;
     cursor: pointer;
-    padding: 1rem 2rem;
+    padding: 0.5rem 1rem;
     background-color: #12128d;
     color: white;
     transition: 0.3s;
+    z-index: 1;
 }
 
 .arrow-left{
-    left: -7%;
+    left: -2%;
 }
 
 .arrow-left:hover{
     left: 0;
+    transform: scale(1.5);
 }
 
 .arrow-right{
-    right: -7%;
+    right: -2%;
 }
 
 .arrow-right:hover{
     right: 0;
+    transform: scale(1.5);
 }
 
 .art-menu-list{ 
@@ -282,47 +293,6 @@ article h2{
 
 article p{
     text-align: justify;
-}
-
-.p-blue{
-    color: blue;
-    font-style: italic;
-}
-
-.p-green{
-    color: green;
-    font-style: italic;
-}
-
-.p-red{
-    color: red;
-    font-style: italic;
-}
-
-.p-aqua{
-    color: aqua;
-    font-style: italic;
-}
-
-.p-brown{
-    color: brown;
-    font-style: italic;
-}
-
-.p-green{
-    color: green;
-    font-style: italic;
-}
-
-.p-yellow{
-    color: yellow;
-    font-style: italic;
-    font-weight: bold;
-}
-
-.p-purple{
-    color: rgb(85, 2, 85);
-    font-style: italic;
 }
 
 table, table tr, table th, table td{

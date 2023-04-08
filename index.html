@@ -344,6 +344,64 @@
             <p><span class='p-white'>salam</span><span class='p-yellow'>()</span></p>
           </div>
         </article>
+        <article class="disactive-article">
+          <h2>4.1. Array</h2>
+          <p>Array dalam PHP adalah variabel yang dapat memiliki banyak nilai dan nilainya itu boleh berbeda-beda tipe.</p>
+          <p>Ada dua unsur utama dalam array, yaitu key dan value. Key adalah kunci utama dari sebuah array. Sedangkan value adalah nilai dari keynya.</p>
+          <p>Key itu terbagi menjadi dua, yaitu index key dan associative key. Secara default, key dalam array adalah index dan dimulai dari 0.</p><br>
+          <p>Perhatikan contoh di bawah ini:</p>
+          <div class="content-code" style="display: block;">
+            <p>Array dengan cara lama: </p>
+            <p><span class='p-aqua'>$hari </span>= <span class='p-yellow'>array</span>(<span class='p-brown'>"Senin", "Selasa", "Rabu"</span>);</p>
+            <p>Array dengan cara baru: </p>
+            <p><span class='p-aqua'>$bulan </span>= [<span class='p-brown'>"Januari", "Februari", "Maret"</span>] </p>
+            <p>Array dengan tipe data yang berbeda:</p>
+            <p><span class='p-aqua'>$arr1 </span>= [123, <span class='p-brown'>"tulisan"</span>, <span class='p-blue'>false</span>]</p>
+
+          </div><br>
+          <p>Keterangan:</p>
+          <ul class="list-content">
+            <li><p>$hari, $bulan, dan $array merupakan sebuah variabel.</p></li>
+            <li><p>Dalam cara lama, programmer harus menuliskan keterangan array dan dikurung dengan tanda kurung biasa "(...)"</p></li>
+            <li><p>Dalam cara baru, programmer sudah tidak harus menuliskan keterangan. Cukup menandakan array dengan tanda kurung siku sebagaimana variabel $bulan dan $arr1</p></li>
+            <li><p>Pada variabel $hari, array dengan index 0 memiliki key senin. Begitupun juga berlaku pada variabel $bulan dan $arr1</p></li>
+          </ul>
+        </article>
+        <article class="disactive-article">
+          <h2>4.2. Menampilkan Array</h2>
+          <p>Ada beberapa cara menampilkan Array, yaitu dengan cara menggunakan keyword var_dump dan print_r. Echo tidak dapat menampilan array.</p><br>
+          <p>Contoh : </p>
+          <div class="content-code" style="display: block;">
+            <p><span class='p-aqua'>$hari </span>= <span class='p-yellow'>array</span>(<span class='p-brown'>"Senin", "Selasa", "Rabu"</span>);</p>
+            <p><span class='p-aqua'>$bulan </span>= [<span class='p-brown'>"Januari", "Februari", "Maret"</span>] </p>
+            <p><span class='p-aqua'>$arr1 </span>= [123, <span class='p-brown'>"tulisan"</span>, <span class='p-blue'>false</span>]</p>
+            <p>Memanggil Array</p>
+            <p><span class='p-yellow'>var_dump</span>(<span class='p-aqua'>$hari</span>);</p>
+            <p><span class='p-yellow'>print_r</span>(<span class='p-aqua'>$bulan</span>);</p>
+          </div><br>
+          <p>Seperti yang tertulis sebelumnya, echo memang tidak dapat memanggil Array. Namun, jika hanya ingin menampilkan suatu nilai dari array index tertentu, echo dapat digunakan. Contoh: </p>
+          <div class="content-code" style="display: block;">
+            <p><span class='p-yellow'>echo</span> <span class='p-aqua'>$arr1</span>[1];</p>
+            <p><span class='p-yellow'>echo</span> <span class='p-aqua'>$bulan</span>[1];</p>
+          </div>
+        </article>
+        <article class="disactive-article">
+          <h2>4.3. Menambahkan value baru pada array</h2>
+          <p>PHP memperbolehkan para programmernya untuk menambahkan nilai atau value baru pada suatu array. Berikut adalah contohnya.</p>
+          <div class="content-code" style="display: block;">
+            <p><span class='p-aqua'>$hari </span>= <span class='p-yellow'>array</span>(<span class='p-brown'>"Senin", "Selasa", "Rabu"</span>); <span class='p-green'>// Array awal</span></p>
+            <p><span class='p-aqua'>$hari</span><span class='p-yellow'>[]</span> = <span class='p-brown'>"Kamis"</span>; <span class='p-green'>// Menambahkan satu value array baru</span></p>
+          </div>
+        </article>
+        <article class="disactive-article">
+          <h2>4.4. Pengulangan pada Array</h2>
+          <p>Pada 2.2, kita telah mempelajari salah satu control flow <strong>for</strong> yang berfungsi untuk melakukan looping atau pengulangan.</p>
+          <p>Jika ingin melakukan pengulangan pada array, for ini tidak dapat kita gunakan.</p>
+          <p>Pengulangan pada dapat menggunakan foreach dengan sintaks dasar sebagai berikut:</p>
+          <div class="content-code">
+            <p><span class='p-purple'>foreach</span><span class='p-yellow'>(</span> <span class='p-aqua'>$variable_array</span> <span class='p-white'>as</span> <span class='p-aqua'>$new_variable</span> <span class='p-yellow'>)</span></p>
+          </div>
+        </article>
       </div>
         <!-- ALL ARTICLE END -->
         <div class="arrow-art">
@@ -357,6 +415,7 @@
         <div class="menu-list" onclick="goToSide(0)"><p>1<span> Dasar-dasar</span></p></div>
         <div class="menu-list" onclick="goToSide(6)"><p>2<span> Control Flow</span></p></div>
         <div class="menu-list" onclick="goToSide(11)"><p>3<span> Function</span></p></div>
+        <div class="menu-list" onclick="goToSide(13)"><p>4<span> Array</span></p></div>
         <i data-feather="arrow-right" class="right-menu" onclick="nanti()"></i>
         <i data-feather="arrow-left" class="left-menu"onclick="nanti()"></i>
         </div>

@@ -60,6 +60,7 @@
         <h1>Ringkasan PHP</h1>
       </header>
       <div class="content-container">
+        <!-- ALL ARTICLE START -->
         <div class="article-container">
         <!-- ALL ARTICLE START -->
         <article>
@@ -400,7 +401,133 @@
           <p>Pengulangan pada dapat menggunakan foreach dengan sintaks dasar sebagai berikut:</p>
           <div class="content-code">
             <p><span class='p-purple'>foreach</span><span class='p-yellow'>(</span> <span class='p-aqua'>$variable_array</span> <span class='p-white'>as</span> <span class='p-aqua'>$new_variable</span> <span class='p-yellow'>)</span></p>
+          </div> <br>
+          <p>Contoh:</p>
+          <div class="content-code" style="display: block;">
+            <p><span class='p-aqua'>$hari </span>= <span class='p-yellow'>array</span>(<span class='p-brown'>"Senin", "Selasa", "Rabu"</span>); <span class='p-green'>// Array awal</span></p> <br>
+            <p><span class='p-purple'>foreach</span><span class='p-yellow'>(</span> <span class='p-aqua'>$days</span> as <span class='p-aqua'>$day</span> <span class='p-yellow'>)</span>;</p>
           </div>
+        </article>
+        <article class="disactive-article">
+          <h2>5.1. Array Associative</h2>
+          <p>Pada 4.1, telah disinggung bahwasanya dalam PHP, ada array associative. Array Associative memungkinkan programmer untuk memberi nama sendiri key yang berada di dalam suatu array.</p>
+          <p>Sintaks pembuatannya:</p>
+          <div class="content-code" style="display: block;">
+            <p><span class='p-aqua'>$namaArray</span> = <span class='p-purple'>[</span> <span class='p-brown'>"namaKey"</span> => <span class='p-brown'>"valueKey"</span> <span class='p-purple'>]</span></p><br>
+            <p><span class='p-white'>echo</span> <span class='p-aqua'>$namaArray</span><span class='p-yellow'>[</span><span class='p-brown'>"namaKey"</span><span class='p-yellow'>]</span> <span class='p-green'>// Cara memanggil Array Associative</span></p>
+          </div>
+        </article>
+        <article class="disactive-article">
+          <h2>6.1. Tips I (Gaya Template)</h2>
+          <p>PHP itu dapat disatukan dalam HTML. Oleh karena itu, penulisan sintaks dengan gaya template ini dapat membantu.</p>
+          <p>Penulisan gaya template ini berlaku pada control flow yang telah kita pelajari seperti for, if, foreach, dsb.</p>
+          <p>Penulisannya pun sangat mudah. Ubah tanda kurung kurawal buka "{" menjadi tanda titik dua ":" dan ubah kurung kurawal tutupnya "}" menjadi end<em>namacontrolflow</em>, contoh:</p><br>
+          <p>Menggunakan gaya biasa:</p>
+          <div class="content-code" style="display: block;">
+            <p><span class='p-purple'>for</span><span class='p-yellow'>(</span><span class='p-aqua'>$x</span> = <span class='p-red'>0</span>; <span class='p-aqua'>$x</span> &lt <span class='p-aqua'>$y.length</span>; <span class='p-aqua'>$x++</span><span class='p-yellow'>)</span>{</p>
+              <em><b>Kode HTML</b></em>
+            <p>}</p>
+          </div><br>
+          <p>Menggunakan gaya template</p>
+          <div class="content-code" style="display: block;">
+            <p><span class='p-blue'>&lt?php</span> <span class='p-purple'>for</span><span class='p-yellow'>(</span><span class='p-aqua'>$x</span> = <span class='p-red'>0</span>; <span class='p-aqua'>$x</span> &lt <span class='p-aqua'>$y.length</span>; <span class='p-aqua'>$x++</span><span class='p-yellow'>)</span>: <span class='p-blue'>?></span><span class='p-green'>//Berubah menjadi tanda titik dua ":"</span></p>
+              <em><b>Kode HTML</b></em>
+            <p><span class='p-blue'>&lt?php</span><span class='p-purple'> endfor</span> <span class='p-blue'>?></span> <span class='p-green'>// Berubah menjadi endfor</span></p>
+          </div>
+        </article>
+        <article class="disactive-article">
+          <h2>6.2. Ringkasan Tabel Gaya Template</h2>
+          <p>Gaya Template itu dapat digunakan oleh berbagai macam control flow yang telah kita pelajari. Di bawah ini adalah tabelnya.</p><br>
+          <table width="100%">
+            <tr>
+              <th>Keyword</th>
+              <th>Gaya Biasa</th>
+              <th>Gaya Template</th>
+            </tr>
+            <tr>
+              <td>while</td>
+              <td>{ ... }</td>
+              <td>: ... endwhile</td>
+            </tr>
+            <tr>
+              <td>for</td>
+              <td>{ ... }</td>
+              <td>: ... endfor</td>
+            </tr>
+            <tr>
+              <td>if</td>
+              <td>{ ... }</td>
+              <td>: ... endif</td>
+            </tr>
+            <tr>
+              <td>foreach</td>
+              <td>{ ... }</td>
+              <td>: ... endforeach</td>
+            </tr>
+          </table>
+        </article>
+        <article class="disactive-article">
+          <h2>7.1. Macam-macam variabel</h2>
+          <p>Ada beberapa jenis variabel dalam PHP, yaitu variabel lokal, variabel global, dan variabel superglobal.</p>
+          <p><b>Variabel lokal</b> adalah variabel yang berada di dalam tanda kurung kurawal, biasanya sering digunakan dalam pembuatan function.</p>
+          <p><b>Variabel global</b> adalah variabel yang berada di dalam teks php dan dapat diakses dari dalam dengan menggunakan keyword global.</p>
+          <p><b>Variabel superglobal</b> adalah yang sudah tersedia secara superglobal dan tidak perlu menggunakan keyword tertentu dalam pemanggilannya.</p><br>
+          <div class="content-code" style="display: block;">
+            <p><span class='p-aqua'>$x</span> = 10; <span class='p-green'>//Variabel global</span></p>
+            <p><span class='p-blue'>function</span> <span class='p-white'>tampilX</span> <span class='p-yellow'>(){</span></p>
+            <p><span class='p-aqua'>$y </span>= 9; <span class='p-green'>// Variabel lokal</span></p>
+            <p><span class='p-blue'>global </span><span class='p-aqua'>$x;</span>; <span class='p-green'>//Perlu keyyword global jika ingin mengakses variabel $x</span></p>
+            <p><span class='p-yellow'>}</span></p>
+          </div>
+        </article>
+        <article class="disactive-article">
+          <h2>7.2. Variabel Superglobal</h2>
+          <p>Variabel superglobal adalah variabel yang sudah tersedia di dalam PHP dan sudah tidak perlu lagi didefinisikan.</p>
+          <br><p>Perhatikan tabel di bawah ini:</p>
+          <table>
+            <tr>
+              <th>Nama Variabel</th>
+              <th>Fungsi</th>
+            </tr>
+            <tr>
+              <td>$_GET</td>
+              <td>Menangkap data yang ada di dalam URL. Biasa digunakan dalam pembuatan form.</td>
+            </tr>
+            <tr>
+              <td>$_POST</td>
+              <td>Menangkap data yang dikirimkan oleh form dengan method post.</td>
+            </tr>
+            <tr>
+              <td>$_REQUEST</td>
+              <td>Menyimpan gabungan nilai dari variabel $_GET, $_POST, dan $_COOKIE yang saling berhubungan dengan data yang dikirim bersamaan dengan request user</td>
+            </tr>
+            <tr>
+              <td>$_SESSION</td>
+              <td>Menyimpan data user yang login dalam kurun waktu tertentu. Secara default, waktunya adalah 1440 detik atau 24ment.</td>
+            </tr>
+            <tr>
+              <td>$_COOKIE</td>
+              <td>Menyimpan data user yang pernah login dalam device user itu sendiri. Biasa digunakan saat ingin menerapkan auto login.</td>
+            </tr>
+            <tr>
+              <td>$_SERVER</td>
+              <td>Menyimpan segala informasi tentang request yang ditangkap oleh server.</td>
+            </tr>
+            <tr>
+              <td>$_ENV</td>
+              <td>Berisi data tentang environment yang skrip PHP berjalan di atasnya</td>
+            </tr>
+            <tr>
+              <td>$_FILES</td>
+              <td>Menangkap file yang digunakan dalam elemen input tipe file pada HTML</td>
+            </tr>
+            <tr>
+              <td>$GLOBALS</td>
+              <td>Menyimpan semua variabel global yang dijalankan saat program diluncurkan.</td>
+            </tr>
+          </table><br>
+          <p><a href="https://jagongoding.com/web/php/menengah/variabel-super-global/" target="_blank">Sumber bahasa Indonesia</a></p>
+          <p><a href="https://www.php.net/manual/en/language.variables.superglobals.php" target="_blank">Sumber Dokumentasi PHP</a></p>
         </article>
       </div>
         <!-- ALL ARTICLE END -->
@@ -416,6 +543,9 @@
         <div class="menu-list" onclick="goToSide(6)"><p>2<span> Control Flow</span></p></div>
         <div class="menu-list" onclick="goToSide(11)"><p>3<span> Function</span></p></div>
         <div class="menu-list" onclick="goToSide(13)"><p>4<span> Array</span></p></div>
+        <div class="menu-list" onclick="goToSide(17)"><p>5<span> Array Associative</span></p></div>
+        <div class="menu-list" onclick="goToSide(18)"><p>6<span> Tips I</span></p></div>
+        <div class="menu-list" onclick="goToSide(20)"><p>7<span> Variabel</span></p></div>
         <i data-feather="arrow-right" class="right-menu" onclick="nanti()"></i>
         <i data-feather="arrow-left" class="left-menu"onclick="nanti()"></i>
         </div>

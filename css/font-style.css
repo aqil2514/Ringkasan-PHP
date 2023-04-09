@@ -16,42 +16,50 @@ LIST END */
     color: #c8f028;
     font-style: italic;
     font-weight: bold;
+    -webkit-text-stroke: 0.5px black;
 }
 
 .p-blue{
     color: blue;
     font-style: italic;
     font-weight: bold;
+    -webkit-text-stroke: 0.5px black;
 }
 
 .p-green{
     color: green;
     font-style: italic;
+    -webkit-text-stroke: 0.5px black;
 }
 
 .p-red{
     color: red;
     font-style: italic;
+    -webkit-text-stroke: 0.5px black;
 }
 
 .p-aqua{
-    color: rgb(70, 255, 255);
+    color: rgb(5, 177, 177);
     font-style: italic;
+    -webkit-text-stroke: 0.5px black;
 }
 
 .p-brown{
     color: brown;
     font-style: italic;
+    -webkit-text-stroke: 0.5px black;
 }
 
 .p-yellow{
     color: yellow;
     font-style: italic;
     font-weight: bold;
+    -webkit-text-stroke: 0.5px black;
 }
 
 .p-purple{
     color: rgb(85, 2, 85);
     font-style: italic;
     font-weight: bold;
+    -webkit-text-stroke: 0.5px black;
 }

@@ -118,7 +118,7 @@
           <br>
           <p>Di bawah ini adalah contoh pemanggilannya.</p>
           <div class="content-code">
-            <p><span class="p-aqua">$nama_depan</span>= <span class="p-brown">"Muhamad"</span> . " " <span class="p-aqua">$nama_tengah</span>= <span class="p-brown">"Aqil"</span> . " ". <span class="p-aqua">$nama_belakang</span>= <span class="p-brown">"Maulana"</span></p>
+            <p><span class="p-aqua">$nama_depan</span> . " " <span class="p-aqua">$nama_tengah</span></span> . " ". <span class="p-aqua">$nama_belakang</span></p>
           </div>
         </article>
         <article class="disactive-article">
@@ -177,10 +177,10 @@
         </article>
         <article class="disactive-article">
           <h2>1.5 Dasar-dasar PHP (Komentar)</h2>
-          <p>Ada dua cara memberika komentar dalam PHP, yaitu dengan tanda kurung dua kali "//" dan tanda bintang ditambah tanda kurung "/*...*/", contoh:</p>
+          <p>Ada dua cara memberikan komentar dalam PHP, yaitu dengan tanda slash dua kali "//" dan tanda bintang ditambah tanda slash "/*...*/", contoh:</p>
           <div class="content-code">
-            <p><span class="p-green">// Ini adalah komentar dalam PHP dengan menggunakan dua kali tanda kurung.</span></p></div> <br>
-            <div class="content-code"> <p><span class="p-green">/* Ini adalah komentar dalam PHP dengan menggunakan tanda bintang + tanda kurung.
+            <p><span class="p-green">// Ini adalah komentar dalam PHP dengan menggunakan dua kali tanda slash.</span></p></div> <br>
+            <div class="content-code"> <p><span class="p-green">/* Ini adalah komentar dalam PHP dengan menggunakan tanda bintang + tanda slash.
               Mudah kan?*/
             </span></p>
           </div>
@@ -280,7 +280,7 @@
         </article>
         <article class="disactive-article">
           <h2>2.5. Control Flow (If...Else)</h2>
-          <p>Sama seperti yang lainnya, If...Else adalah looping yang ada pada PHP. Tidak hanya If...Else, PHP juga mengenal istilah elseif. Penulisannya bisa disambung (elseif) dan bisa dipisah (else if).</p>
+          <p>Sama seperti yang lainnya, If...Else adalah pengkondisian yang ada pada PHP. Tidak hanya If...Else, PHP juga mengenal istilah elseif. Penulisannya bisa disambung (elseif) dan bisa dipisah (else if).</p>
           <p>Sintaks:</p>
           <div class="content-code" style="display: block;">
             <p><span class="p-purple">if</span>(Kondisi) {</p>
@@ -382,8 +382,8 @@
           </div><br>
           <p>Seperti yang tertulis sebelumnya, echo memang tidak dapat memanggil Array. Namun, jika hanya ingin menampilkan suatu nilai dari array index tertentu, echo dapat digunakan. Contoh: </p>
           <div class="content-code" style="display: block;">
-            <p><span class='p-yellow'>echo</span> <span class='p-aqua'>$arr1</span>[1];</p>
-            <p><span class='p-yellow'>echo</span> <span class='p-aqua'>$bulan</span>[1];</p>
+            <p><span class='p-yellow'>echo</span> <span class='p-aqua'>$arr1</span>[1]; <span class='p-green'>//Akan tampil value index ke-1 dari variabel $arr1, yaitu "tulisan"</span></p>
+            <p><span class='p-yellow'>echo</span> <span class='p-aqua'>$bulan</span>[1];<span class='p-green'> // Akan tampil value index ke-1 dari variabel $bulan, yaitu "Februari"</span></p>
           </div>
         </article>
         <article class="disactive-article">
@@ -396,7 +396,7 @@
         </article>
         <article class="disactive-article">
           <h2>4.4. Pengulangan pada Array</h2>
-          <p>Pada 2.2, kita telah mempelajari salah satu control flow <strong>for</strong> yang berfungsi untuk melakukan looping atau pengulangan.</p>
+          <p>Pada <span onclick="goToSide(7)" style="cursor: pointer;">2.2</span>, kita telah mempelajari salah satu control flow <strong>for</strong> yang berfungsi untuk melakukan looping atau pengulangan.</p>
           <p>Jika ingin melakukan pengulangan pada array, for ini tidak dapat kita gunakan.</p>
           <p>Pengulangan pada dapat menggunakan foreach dengan sintaks dasar sebagai berikut:</p>
           <div class="content-code">
@@ -404,13 +404,13 @@
           </div> <br>
           <p>Contoh:</p>
           <div class="content-code" style="display: block;">
-            <p><span class='p-aqua'>$hari </span>= <span class='p-yellow'>array</span>(<span class='p-brown'>"Senin", "Selasa", "Rabu"</span>); <span class='p-green'>// Array awal</span></p> <br>
+            <p><span class='p-aqua'>$days </span>= <span class='p-yellow'>array</span>(<span class='p-brown'>"Senin", "Selasa", "Rabu"</span>); <span class='p-green'>// Array awal</span></p> <br>
             <p><span class='p-purple'>foreach</span><span class='p-yellow'>(</span> <span class='p-aqua'>$days</span> as <span class='p-aqua'>$day</span> <span class='p-yellow'>)</span>;</p>
           </div>
         </article>
         <article class="disactive-article">
           <h2>5.1. Array Associative</h2>
-          <p>Pada 4.1, telah disinggung bahwasanya dalam PHP, ada array associative. Array Associative memungkinkan programmer untuk memberi nama sendiri key yang berada di dalam suatu array.</p>
+          <p>Pada <span onclick="goToSide(13)" style="cursor: pointer;">4.1</span>, telah disinggung bahwasanya dalam PHP, ada array associative. Array Associative memungkinkan programmer untuk memberi nama sendiri key yang berada di dalam suatu array.</p>
           <p>Sintaks pembuatannya:</p>
           <div class="content-code" style="display: block;">
             <p><span class='p-aqua'>$namaArray</span> = <span class='p-purple'>[</span> <span class='p-brown'>"namaKey"</span> => <span class='p-brown'>"valueKey"</span> <span class='p-purple'>]</span></p><br>
@@ -483,6 +483,7 @@
         <article class="disactive-article">
           <h2>7.2. Variabel Superglobal</h2>
           <p>Variabel superglobal adalah variabel yang sudah tersedia di dalam PHP dan sudah tidak perlu lagi didefinisikan.</p>
+          <p>Variabel superglobal memiliki tipe data array associative.</p>
           <br><p>Perhatikan tabel di bawah ini:</p>
           <table>
             <tr>
@@ -529,6 +530,102 @@
           <p><a href="https://jagongoding.com/web/php/menengah/variabel-super-global/" target="_blank">Sumber bahasa Indonesia</a></p>
           <p><a href="https://www.php.net/manual/en/language.variables.superglobals.php" target="_blank">Sumber Dokumentasi PHP</a></p>
         </article>
+        <article class="disactive-article">
+          <h2>8.1. Get & Post</h2>
+          <p>Get & Post merupakan variabel superglobal yang sangat berkaitan erat dengan form dengan method tertentu.</p>
+          <p>Dalam HTML, element form memiliki atribut method. Method ini memiliki value "post" dan "get".</p>
+          <p>Method get berfungsi untuk mengirimkan data ke dalam URL. Hal ini memungkinkan para pengguna web dapat melihat data apa yang dikiriman.</p>
+          <p>Jika menggunakan method post, data yang dikirimkan bukan ke URL. Data tersebut dikirim ke belakang layar.</p>
+        </article>
+        <article class="disactive-article">
+          <h2>8.2. Method Get (Mengirim Variabel)</h2>
+          <p>Method Get ini berfungsi untuk mengirimkan informasi mengenai variabel dan nilai yang dikirimkan ke URL.</p>
+          <p>Variabel dan nilai ini harus didefinisikan terlebih dahulu.</p>
+          <p>Misal, saya memiliki variabel berupa array sebagai berikut:</p>
+          <div class="content-code" style="display: block;">
+            <p><span class='p-aqua'>$tanaman</span> = <span class='p-yellow'>[</span></p>
+            <p><span class='p-brown' style="margin-left: 2rem;">"nama"</span> => <span class='p-brown'>"Stroberi"</span>,</p>
+            <p><span class='p-brown' style="margin-left: 2rem;">"panen"</span> => <span class='p-brown'>"Sekitar 2 bulan"</span>,</p>
+            <p><span class='p-brown' style="margin-left: 2rem;">"harga"</span> => <span class='p-brown'>"Rp30.000"</span>,</p>
+            <p><span class='p-brown' style="margin-left: 2rem;">"gambar"</span> => <span class='p-brown'>"img/stroberi.jpg"</span>,</p>
+            <p><span class='p-yellow'>]</span></p>
+          </div> <br>
+          <p>Kemudian, saya membuat sebuah elemen HTML a dengan href sebagai berikut.</p>
+          <div class="content-code">
+            <p><span class='p-blue'>&lta</span> <span class='p-aqua'>href</span> = <span class='p-brown'>"latihan3.php?nama=</span><span class='p-blue'>&lt?=</span> <span class='p-aqua'>$tanaman</span><span class='p-yellow'>[</span><span class='p-brown'>"nama"</span><span class='p-yellow'>]</span><span class='p-blue'> ?&gt</span><span class='p-brown'></span><span class='p-brown'>&panen=</span><span class='p-blue'>&lt?=</span> <span class='p-aqua'>$tanaman</span><span class='p-yellow'>[</span><span class='p-brown'>"panen"</span><span class='p-yellow'>]</span><span class='p-blue'> ?&gt</span><span class='p-brown'></span><span class="p-brown">&harga=</span><span class='p-blue'>&lt?=</span> <span class='p-aqua'>$tanaman</span><span class='p-yellow'>[</span><span class='p-brown'>"harga"</span><span class='p-yellow'>]</span><span class='p-blue'> ?&gt</span><span class='p-brown'></span><span class="p-brown">&gambar=</span><span class='p-blue'>&lt?=</span> <span class='p-aqua'>$tanaman</span><span class='p-yellow'>[</span><span class='p-brown'>"gambar"</span><span class='p-yellow'>]</span><span class='p-blue'> ?&gt</span><span class='p-brown'></span> <span class='p-blue'>/a&gt</span></p>
+          </div> <br>
+          <p>Keterangan</p>
+          <ul class="list-content">
+            <li><p><strong>?</strong> : Pemisah antara url dan variabel</p></li>
+            <li><p><strong>nama</strong> : Variabel</p></li>
+            <li><p><strong>$tanaman["nama"]</strong> : value</p></li>
+          </ul>
+          <p>Kode di atas akan menghasilkan URL sebagai berikut</p>
+          <div class="content-code">
+            <p><em><strong>latihan3.php?nama=Stroberi&panen=Sekitar%202%20bulan&harga=Rp30.000&gambar=img/stroberi.jpg</em></strong></p>
+          </div>
+          <p>Hal yang dilakukan di atas hanya mengirimkan data saja.</p>
+        </article>
+        <article class="disactive-article">
+          <h2>8.3. Method Get (Menangkap Variabel)</h2>
+          <p>Pada slide sebelumnya, kita telah membuat sebuah code yang berfungsi untuk mengirimkan sebuah data ke dalam URL.</p>
+          <p>Kode sebelumnya akan menghasilkan sebuah link berikut:</p>
+          <div class="content-code">
+            <p><em><strong>latihan3.php?nama=Stroberi&panen=Sekitar%202%20bulan&harga=Rp30.000&gambar=img/stroberi.jpg</em></strong></p>
+          </div><br>
+          <p>Untuk menangkapnya, kita memerlukan variabel superglobal $_GET. Perhatikan kode berikut:</p>
+          <div class="content-code" style="display: block;">
+            <p><span class='p-blue'>&ltul&gt</span></p>
+            <p style="margin-left: 1rem;"><span class='p-blue'>&ltli&gt</span>Nama = <span class='p-blue'>&lt?=</span> <span class='p-aqua'>$_GET</span><span class='p-yellow'>[</span><span class='p-brown'>"nama"</span><span class='p-yellow'>]</span><span class='p-blue'>&lt/li&gt</span><span class='p-green'> // Variabel nama dalam URL = Stroberi</span></p>
+            <p style="margin-left: 1rem;"><span class='p-blue'>&ltli&gt</span>Perkiraan Panen = <span class='p-blue'>&lt?=</span> <span class='p-aqua'>$_GET</span><span class='p-yellow'>[</span><span class='p-brown'>"panen"</span><span class='p-yellow'>]</span><span class='p-blue'>&lt/li&gt</span><span class='p-green'> // Variabel panen dalam URL = Sekitar 2 bulan (%20 = Tanda spasi dalam URL)</span></p>
+            <p style="margin-left: 1rem;"><span class='p-blue'>&ltli&gt</span>Kisaran Harga = <span class='p-blue'>&lt?=</span> <span class='p-aqua'>$_GET</span><span class='p-yellow'>[</span><span class='p-brown'>"harga"</span><span class='p-yellow'>]</span><span class='p-blue'>&lt/li&gt</span><span class='p-green'> // Variabel harga dalam URL = Rp30.000</span></p>
+            <p style="margin-left: 1rem;"><span class='p-blue'>&ltli&gt</span>Gambar = <span class='p-blue'>&lt?=</span> <span class='p-aqua'>$_GET</span><span class='p-yellow'>[</span><span class='p-brown'>"gambar"</span><span class='p-yellow'>]</span><span class='p-blue'>&lt/li&gt</span><span class='p-green'> // Variabel gambar dalam URL = img/stroberi</span></p>
+            <p><span class='p-blue'>&lt/ul&gt</span></p>
+          </div>
+        </article>
+        <article class="disactive-article">
+          <h2>8.4. Method Post (Mengirim Data)</h2>
+          <p>Method Post merupakan salah satu cara untuk mengirimkan data. Data yang dikirimkan tersebut tidak akan tampil di dalam URL, namun telah ditangkap oleh server.</p>
+          <p>Misal, saya membuat sebuah element HTML form dengan detail sebagai berikut:</p>
+          <div class="content-code" style="display: block;">
+            <p><span class='p-blue'>&ltform&gt</span></p>
+            <p style="margin-left: 1rem;">Masukkan Nama :</p>
+            <p>&lt<span class='p-blue'>input</span> 
+            <span class='p-aqua'>type</span>=<span class='p-brown'>"text"</span> <span class='p-aqua'>name</span>=<span class='p-brown'>"nama"</span>/&gt</p>
+            <p>&lt<span class='p-blue'>button</span> 
+            <span class='p-aqua'>type</span>= <span class='p-brown'>"submit"</span><span class='p-aqua'>name</span>= <span class='p-brown'>"submit"</span>&gt Kirim! &lt/<span class='p-blue'>button</span>&gt</p>
+            <p><span class='p-blue'>&lt/form&gt</span></p>
+          </div><br>
+          <p>Kode tersebut akan menghasilkan sebagai berikut:</p>
+          <div class="content-code" style="display: block;">
+            <p>Masukkan Nama!</p>
+            <input type="text" name="nama"> <br>
+            <button type="submit" name="submit">Kirim!</button>
+          </div>
+        </article>
+        <article class="disactive-article">
+          <h2>8.5. Method Post (Menangkap Data)</h2>
+          <p>Sama dengan method get, penangkapan data dengan menggunakan method post adalah menggunakan variabel superglobal $_POST.</p>
+          <p>Pada pengiriman data, kita telah membuat kode dengan hasil sebagai berikut:</p>
+          <div class="content-code" style="display: block;">
+            <p>Masukkan Nama!</p>
+            <input type="text" name="nama"> <br>
+            <button type="submit" name="submit">Kirim!</button>
+          </div><br>
+          <p>Penangkapan data dapat dilakukan dengan cara berikut</p>
+          <div class="content-code" style="display: block;">
+            <p>
+              <span class='p-blue'>&lt?php</span><span class='p-purple'> if</span><span class='p-yellow'>(</span><span class='p-white'>isset</span><span class='p-purple'>(</span><span class='p-aqua'>$_POST[</span><span class='p-brown'>"submit</span><span class='p-aqua'>]</span><span class='p-purple'>)</span>  <span class='p-yellow'>)</span> :<span class='p-blue'>?&gt</span>
+            </p>
+            <p>
+              &lt<span class='p-blue'>h1</span>&gt Halo Selamat Datang, <span class='p-blue'>&lt?=</span> <span class='p-aqua'>$_POST</span><span class='p-yellow'>[</span><span class='p-brown'>"nama"</span><span class='p-yellow'>]</span> <span class='p-blue'>?></span> &lt<span class='p-blue'>/h1</span>&gt <span class='p-green'>// H1 di sini akan mengikuti nilai apapun yang dimasukkan dalam input text di atas</span>
+            </p>
+          </div><br>
+            <p>Keterangan</p>
+            <ul>
+              <li><p><strong>isset</strong> = fungsi php yang digunakan untuk memeriksa apakah suatu variable tersedia?</p></li>
+            </ul>
+        </article>
       </div>
         <!-- ALL ARTICLE END -->
         <div class="arrow-art">
@@ -546,6 +643,7 @@
         <div class="menu-list" onclick="goToSide(17)"><p>5<span> Array Associative</span></p></div>
         <div class="menu-list" onclick="goToSide(18)"><p>6<span> Tips I</span></p></div>
         <div class="menu-list" onclick="goToSide(20)"><p>7<span> Variabel</span></p></div>
+        <div class="menu-list" onclick="goToSide(22)"><p>8<span> Get & Post</span></p></div>
         <i data-feather="arrow-right" class="right-menu" onclick="nanti()"></i>
         <i data-feather="arrow-left" class="left-menu"onclick="nanti()"></i>
         </div>

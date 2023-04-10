@@ -192,18 +192,12 @@ html{
     left: -2%;
 }
 
-.arrow-left:hover{
-    left: 0;
-    transform: scale(1.5);
+.arrow-left:hover, .arrow-right:hover{
+    background-color: black;
 }
 
 .arrow-right{
     right: -2%;
-}
-
-.arrow-right:hover{
-    right: 0;
-    transform: scale(1.5);
 }
 
 .art-menu-list{ 

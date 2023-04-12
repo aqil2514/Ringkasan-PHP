@@ -626,6 +626,113 @@
               <li><p><strong>isset</strong> = fungsi php yang digunakan untuk memeriksa apakah suatu variable tersedia?</p></li>
             </ul>
         </article>
+        <article class="disactive-article">
+          <h2>9.1. MY_SQL</h2>
+          <p>MY SQL adalah salah satu DBMS (Data Base Management System) yang populer digunakan.</p>
+          <p>Beberapa situs besar seperti Facebook, Twitter, Airbnb, Booking.com, Uber, GitHub, YouTube bahkan menggunakan DBMS ini untuk mengelola databasenya.</p>
+          <p>Dalam MY SQL, keywordnya tidak terlalu sensitif. "select" sama dengan "SELECT".</p>
+        </article>
+        <article class="disactive-article">
+          <h2>9.2. SQL Commands</h2>
+          <p>SQL memiliki begitu banyak Command penting. Namun, ada beberapa SQL commands yang harus diketahui oleh para pengguna SQL, berikut adalah tabelnya:</p><br>
+          <table>
+            <tr>
+              <th>Command</th>
+              <th>Fungsi</th>
+            </tr>
+            <tr>
+              <td>SELECT</td>
+              <td>Ekstrak data dari database</td>
+            </tr>
+            <tr>
+              <td>UPDATE</td>
+              <td>Update data ke database</td>
+            </tr>
+            <tr>
+              <td>DELETE</td>
+              <td>Menghapus data dari database</td>
+            </tr>
+            <tr>
+              <td>INSERT INTO</td>
+              <td>Menambahkan data baru ke database</td>
+            </tr>
+            <tr>
+              <td>CREATE DATABASE</td>
+              <td>Membuat database baru</td>
+            </tr>
+            <tr>
+              <td>ALTER DATABASE</td>
+              <td>Modifikasi databse</td>
+            </tr>
+            <tr>
+              <td>CREATE TABLE</td>
+              <td>Membuat tabel baru</td>
+            </tr>
+            <tr>
+              <td>ALTER TABLE</td>
+              <td>Modifikasi Tabel</td>
+            </tr>
+            <tr>
+              <td>DROP TABLE</td>
+              <td>Menghapus Tabel</td>
+            </tr>
+            <tr>
+              <td>CREATE INDEX</td>
+              <td>Membuat indeks (kunci pencarian)</td>
+            </tr>
+            <tr>
+              <td>DROP INDEX</td>
+              <td>Hapus Indeks</td>
+            </tr>
+          </table>
+        </article>
+        <article class="disactive-article">
+          <h2>9.3. Koneksi ke Database</h2>
+          <p>Sebelum menggunakan database, kita harus koneksi terlebih dahulu ke data base. Berikut adalah contoh keyword yang digunakan dalam koneksi database.</p>
+          <div class="content-code">
+            <p><span class='p-aqua'>$conn</span> = <span class='p-white'>mysqli_connect</span>
+            <span class='p-yellow'>(</span><span class='p-brown'>"localhost"</span>, <span class='p-brown'>"root"</span>, <span class='p-brown'>""</span>, <span class='p-brown'>"phpdasar"</span><span class='p-yellow'>)</span></p>
+          </div><br>
+          <p>Keterangan:</p>
+          <ul>
+            <li><p><strong>$conn</strong> = Variabel. (Disarankan agar tidak memanggil command SQL berulang-ulang)</p></li>
+            <li><p><strong>mysqli_connect</strong> = Command SQL yang digunakan untuk koneksi ke database.</p></li>
+            <li><p><strong>"localhost"</strong> = Nama host yang digunakan.</p></li>
+            <li><p><strong>"root"</strong> = Username.</p></li>
+            <li><p><strong>""</strong> = Password.</p></li>
+            <li><p><strong>"phpdasar"</strong> = Nama file dalam MY SQL.</p></li>
+          </ul>
+        </article>
+        <article class="disactive-article">
+          <h2>9.4. Seleksi Database</h2>
+          <p>Setelah melakukan koneksi ke database, selanjutnya adalah seleksi file database mana yang ingin dimanipulasi. Berikut adalah contoh penggunaannya.</p>
+          <div class="content-code">
+            <p><span class='p-aqua'>$result</span> = <span class='p-white'>mysqli_query</span><span class='p-purple'>(</span><span class='p-aqua'>$conn</span>, <span class='p-aqua'>"Instruksi"</span><span class='p-purple'>)</span></p>
+          </div><br>
+          <p>Keterangan:</p>
+          <ul>
+            <li><p><strong>$result</strong> = Variabel penampung command MY SQL</p></li>
+            <li><p><strong>mysqli_query</strong> = Command MY SQL</p></li>
+            <li><p><strong>$conn</strong> = Variabel yang berisi mysqli_connect (Lihat di 9.3)</p></li>
+            <li><p><strong>Instruksi</strong> = Instruksi yang ingin dilakukan (SELECT, DELETE, INSERT INTO, dsb)</p></li>
+          </ul>
+        </article>
+        <article class="disactive-article">
+          <h2>9.5. Mengambil Data dari Database</h2>
+          <p>Dengan menggunakan PHP, ada empat cara yang dapat dilakukan, yaitu:</p>
+          <ul>
+            <li><p><strong>mysqli_fetch_row()</strong> : Mengembalikan Array Numeric (Index).</p></li>
+            <li><p><strong>mysqli_fetch_assoc()</strong> : Mengembalikan Array Associative.</p></li>
+            <li><p><strong>mysqli_fetch_array()</strong> : Mengembalikan kedua Array (Numeric dan Associative). Namun, data yang ditampilkan itu akan double.</p></li>
+            <li><p><strong>mysqli_fetch_object()</strong> : Mengembalikan object, sehingga tidak dapat menggunakan cara pemanggilan array.</p></li>
+          </ul><br>
+          <p>Beberapa cara pengambilan data di atas ini hanya mengambil satu data dari row table dalam database. Jika ingin mengambil secara keseluruhan, gunakan looping while. contoh:</p>
+          <div class="content-code" style="display: block;">
+            <p><span class='p-purple'>while(</span><span class='p-aqua'>$row</span> <span class='p-white'>= mysqli_fetch_assoc<span class='p-aqua'>($result)</span></span><span class='p-purple'>){</span></p>
+              <p><span class='p-aqua'>$row[]</span> = <span class='p-aqua'>$row</span>;</p>
+              <p><span class='p-purple'>}</span></p>
+          </div>
+        </article>
       </div>
         <!-- ALL ARTICLE END -->
         <div class="arrow-art">
@@ -644,10 +751,16 @@
         <div class="menu-list" onclick="goToSide(18)"><p>6<span> Tips I</span></p></div>
         <div class="menu-list" onclick="goToSide(20)"><p>7<span> Variabel</span></p></div>
         <div class="menu-list" onclick="goToSide(22)"><p>8<span> Get & Post</span></p></div>
-        <i data-feather="arrow-right" class="right-menu" onclick="nanti()"></i>
-        <i data-feather="arrow-left" class="left-menu"onclick="nanti()"></i>
+        <i data-feather="arrow-right" class="right-menu" onclick="menuNext()"></i>
+        <i data-feather="arrow-left" class="left-menu"onclick="menuPrev()"></i>
         </div>
-        </div>
+      </div>
+      <div class="art-menu-list menu-list-disactive">
+        <h1 style="text-align: center;">Menu List</h1>
+        <div class="menu-list" onclick="goToSide(27)"><p>9<span> MY SQL</span></p></div>
+        <i data-feather="arrow-right" class="right-menu" onclick="menuNext()"></i>
+        <i data-feather="arrow-left" class="left-menu"onclick="menuPrev()"></i>
+      </div>
       </div>
     </section>
     <!-- MAIN PAGE END -->
